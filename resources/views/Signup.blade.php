@@ -47,8 +47,10 @@
                 <input name="role" type="text" value="{{ $role }}" disabled>
             </div>
             <button type="submit" class="signup-btn">Signup</button>
-            <a href="/login/{{ $role }}">Already registered? login .</a>
-            <a href="/form">go back to form .</a>
+            <div class="flex ">
+                <a href="/login/{{ $role }}">Already registered login ? - </a>
+                <a href="/form"> or go back to form .</a>
+            </div>
         </form>
     </div>
 

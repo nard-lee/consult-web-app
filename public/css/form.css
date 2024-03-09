@@ -24,12 +24,11 @@ body {
     text-align: center;
 }
 
-
-
 .toggle-switch {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
 }
 
 .toggle-switch input[type="radio"] {
@@ -44,7 +43,7 @@ body {
 }
 
 .toggle-switch input[type="radio"]:checked + label {
-    background-color: #f2f2f2;
+    background-color: #ccc;
     color: #0f192a;
 }
 

@@ -33,8 +33,11 @@
             </div>
             <div class="error pWerr"></div>
             <button type="submit" class="signup-btn">Login</button>
-            <a href="/signup/{{ $role }}">Dont have account yet? signup .</a>
-            <a href="/form">go back to form .</a>
+            <div class="flex">
+                <a href="/signup/{{ $role }}">Dont have account yet signup ? - </a>
+                <a href="/form"> or go back to form .</a>
+            </div>
+            <a href="#" style="color: #ccc">Forgot password? .</a>
         </form>
     </div>
 
