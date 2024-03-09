@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
+    <link rel="icon" href="{{ asset('asset/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('css/form.css') }}">
@@ -16,6 +17,7 @@
     <div class="cs-form flex justify-center">
         <section class="con-form flex flex-col gap-5">
             <div class="user-type flex flex-col gap-5">
+                <img src="{{ asset('asset/favicon.png') }}" alt="favicon" class="rounded-lg">
                 <label id="user-type" class="curr">User</label>
                 <div class="toggle-switch flex justify-center gap-2">
                     <input type="radio" id="user-radio" name="role" value="student" checked>

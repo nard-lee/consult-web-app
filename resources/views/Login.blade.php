@@ -7,16 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="{{ asset('asset/favicon.png') }}" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
-    <title>Login</title>
+    <title>Login | {{ $role }}</title>
 </head>
 
 <body>
 
     <div class="flex justify-center pt-5">
         <form class="login-form flex flex-col gap-3" method="POST">
-            <label class="lg-h2">Login</label>
+            <div class="flex items-center gap-3">
+                <img src="{{ asset('asset/favicon.png') }}" alt="favicon" class="rounded-lg" width="70">
+                <label class="lg-h2">Login with account .</label>
+            </div>
+            <br>
             <div class="form-group">
                 <i class="fas fa-at"></i>
                 <input name="email" type="email" placeholder="Email">
@@ -58,9 +63,9 @@
                         let err = data.errors;
                         if (err.email) document.querySelector('.eMerr').innerHTML = err.email;
                         if (err.password) document.querySelector('.pWerr').innerHTML = err.password;
-                    } 
-                    
-                    if(data.success) {
+                    }
+
+                    if (data.success) {
                         console.log(data);
                         window.location.href = "/";
                     }

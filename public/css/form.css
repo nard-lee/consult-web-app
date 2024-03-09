@@ -16,6 +16,7 @@ body {
     width: 25rem;
     padding: 3rem;
     border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .user-type {
@@ -44,7 +45,7 @@ body {
 
 .toggle-switch input[type="radio"]:checked + label {
     background-color: #f2f2f2;
-    color: #333;
+    color: #0f192a;
 }
 
 .form-div button {
@@ -54,16 +55,16 @@ body {
 }
 
 .form-div button:first-child {
-    border: 2px solid #333;
+    border: 2px solid #0f192a;
     background: #fff;
 }
 
 .form-div button:last-child {
-    background-color: #333;
+    background-color: #0f192a;
     color: #fff;
 }
 
 .curr {
-    border-bottom: 2px solid #333;
+    border-bottom: 1px solid #0f192a;
     padding-bottom: 1rem;
 }
