@@ -1,0 +1,47 @@
+
+body {
+    background: #ccc;
+}
+
+.cs-form {
+    padding: 2rem;
+}
+
+.con-form {
+    background: #fff;
+    width: 25rem;
+    padding: 1rem;
+}
+
+.user-type {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-switch input[type="radio"] {
+    display: none;
+}
+
+.toggle-switch label {
+    padding: 8px 12px;
+    background-color: #ebebeb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-switch input[type="radio"]:checked + label {
+    background-color: #ccc;
+    color: #ffffff;
+}
+
+.form-div button {
+    background: #ccc;
+    border-radius: 5px;
+    padding: 8px;
+}

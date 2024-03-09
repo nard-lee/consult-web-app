@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -37,6 +37,10 @@
                 <input name="password" type="password" placeholder="Password">
             </div>
             <div class="error pWerr"></div>
+            <div class="form-group">
+                <i class="fas fa-user-tag"></i>
+                <input name="role "type="text" value="{{ $role }}">
+            </div>
             <button type="submit" class="signup-btn">Signup</button>
         </form>
     </div>
@@ -59,7 +63,7 @@
                         l_name: input.l_name.value,
                         email: input.email.value,
                         password: input.password.value,
-                        role: 'student',
+                        role: input.role.value,
                     }),
                 })
                 .then(response => response.json())

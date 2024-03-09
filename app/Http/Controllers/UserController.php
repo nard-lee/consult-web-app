@@ -21,9 +21,13 @@ class UserController extends Controller
         return $uniqueID;
     }
 
-    public function ViewSignup()
+    public function ViewForm(){
+        return view('Form');
+    }
+
+    public function ViewSignup($role)
     {
-        return view('Signup');
+        return view('Signup', ['role' => $role]);
     }
 
     public function Signup(Request $request)
@@ -50,9 +54,9 @@ class UserController extends Controller
         return response()->json(['success' => "user created"], 201)->withCookie($cookie);
     }
 
-    public function ViewLogin()
+    public function ViewLogin($role)
     {
-        return view('Login');
+        return view('Login', ['role' => $role]);
     }
 
     public function Login(Request $request)
