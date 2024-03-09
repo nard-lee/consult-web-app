@@ -67,10 +67,10 @@
 
                     if (data.errors) {
                         let err = data.errors;
-                        if (err.f_name) document.querySelector('.fNerr').innerHTML = err.f_name[0];
-                        if (err.l_name) document.querySelector('.lNerr').innerHTML = err.l_name[0];
-                        if (err.email) document.querySelector('.eMerr').innerHTML = err.email[0];
-                        if (err.password) document.querySelector('.pWerr').innerHTML = err.password[0];
+                        if (err.f_name  ) document.querySelector('.fNerr').innerHTML = err.f_name;
+                        if (err.l_name  ) document.querySelector('.lNerr').innerHTML = err.l_name;
+                        if (err.email   ) document.querySelector('.eMerr').innerHTML = err.email;
+                        if (err.password) document.querySelector('.pWerr').innerHTML = err.password;
                     } 
                     
                     if(data.success) {
