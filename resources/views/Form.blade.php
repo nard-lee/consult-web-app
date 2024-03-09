@@ -16,7 +16,7 @@
     <div class="cs-form flex justify-center">
         <section class="con-form flex flex-col gap-5">
             <div class="user-type flex flex-col gap-5">
-                <label id="user-type">User</label>
+                <label id="user-type" class="curr">User</label>
                 <div class="toggle-switch flex justify-center gap-2">
                     <input type="radio" id="user-radio" name="role" value="student" checked>
                     <label for="user-radio">Student</label>

@@ -15,10 +15,10 @@
 <body>
 
     <div class="flex justify-center pt-5">
-        <form class="login-form flex flex-col gap-3 p-5" method="POST">
+        <form class="login-form flex flex-col gap-3" method="POST">
             <label class="lg-h2">Login</label>
             <div class="form-group">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-at"></i>
                 <input name="email" type="email" placeholder="Email">
             </div>
             <div class="error eMerr"></div>
@@ -28,6 +28,8 @@
             </div>
             <div class="error pWerr"></div>
             <button type="submit" class="signup-btn">Login</button>
+            <a href="/signup/{{ $role }}">Dont have account yet? signup .</a>
+            <a href="/form">go back to form .</a>
         </form>
     </div>
 

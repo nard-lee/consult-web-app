@@ -1,15 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
     outline: none;
 }
 
 body {
     background: #ccc;
+    font-family: "Poppins", sans-serif;
 }
 
 .error {
     color: red;
     font-size: 11px;
+    font-family: "Poppins", sans-serif;
 }
 
 .form-group {
@@ -18,34 +23,61 @@ body {
 
 .form-group i {
     position: absolute;
-    top: 12px;
+    top: 15px;
     left: 10px;
     color: #333;
 }
 .login-form,
 .signup-form {
-    box-shadow: 0px 0px 10px 0px #ccc;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background: #fff;
     border-radius: 10px;
-    width: 25rem;
-    padding: 4rem;
+    padding: 3rem;
+    width: 30rem;
 }
+
+.login-form a,
+.signup-form a {
+    font-size: 13px;
+}
+
 .login-form input,
 .login-form button,
 .signup-form input,
 .signup-form button {
-    padding: 8px;
+    padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #d9d9d9;
     outline: none;
-    border-radius: 3px;
+    border-radius: 5px;
     width: 100%;
+    font-family: "Poppins", sans-serif;
 }
 .login-form input,
 .signup-form input {
     padding-left: 2rem;
+    background: #d9d9d9;
 }
+
+.login-form input:focus,
+.signup-form input:focus {
+    border: 1px solid #ffff;
+    box-shadow: 0px 0px 0px 2px #333;
+    background: #f2f2f2;
+}
+
 .login-form button,
 .signup-form button {
-    background: #ccc;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ffff;
+    box-shadow: 0px 0px 0px 2px #333;
+}
+
+.login-form button:hover,
+.signup-form button:hover {
+    border: 1px solid #ffff;
+    box-shadow: 0px 0px 0px 2px #00b359;
+    color: #00b359;
+    transition: 200ms;
 }

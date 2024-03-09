@@ -15,7 +15,7 @@
 <body>
 
     <div class="flex justify-center pt-5">
-        <form class="signup-form flex flex-col gap-3 p-5" method="POST">
+        <form class="signup-form flex flex-col gap-3" method="POST">
             <label class="lg-h2">Signup</label>
             <div class="form-group">
                 <i class="fas fa-user"></i>
@@ -28,7 +28,7 @@
             </div>
             <div class="error lNerr"></div>
             <div class="form-group">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-at"></i>
                 <input name="email" type="text" placeholder="Email">
             </div>
             <div class="error eMerr"></div>
@@ -39,9 +39,11 @@
             <div class="error pWerr"></div>
             <div class="form-group">
                 <i class="fas fa-user-tag"></i>
-                <input name="role "type="text" value="{{ $role }}">
+                <input name="role" type="text" value="{{ $role }}" disabled>
             </div>
             <button type="submit" class="signup-btn">Signup</button>
+            <a href="/login/{{ $role }}">Already registered? login .</a>
+            <a href="/form">go back to form .</a>
         </form>
     </div>
 
