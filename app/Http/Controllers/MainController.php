@@ -6,8 +6,13 @@ use Illuminate\Support\Facades\Cookie;
 
 class MainController extends Controller
 {
-    public function Main(){
+    public function Dashboard(){
         $user = Cookie::get('c_user');
-        return view('Main', ['user' => json_decode($user, true)]);
+        return view('Dashboard', ['user' => json_decode($user, true)]);
+    }
+
+    public function Consult(){
+        $user = Cookie::get('c_user');
+        return view('Consult', ['user' => json_decode($user, true)]);
     }
 }
