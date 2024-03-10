@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Cookie;
 class MainController extends Controller
 {
     public function Main(){
-        $user = Cookie::get('user_data');
+        $user = Cookie::get('c_user');
         return view('Main', ['user' => json_decode($user, true)]);
     }
 }

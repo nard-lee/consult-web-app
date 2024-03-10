@@ -42,16 +42,7 @@ class UserController extends Controller
         $user->role = $request->role;
         $user->save();
 
-        $userData = [
-            'user_id' => $user->user_id,
-            'f_name'  => $user->f_name,
-            'l_name'  => $user->l_name,
-            'email'   => $user->email,
-            'role'    => $user->role,
-        ];
-
-        $cookie = Cookie::make('user_data', json_encode($userData), 60);
-        return response()->json(['success' => "user created"], 201)->withCookie($cookie);
+        return response()->json(['success' => "user created", "role" => $request->role], 200);
     }
 
     public function ViewLogin($role)
@@ -71,7 +62,7 @@ class UserController extends Controller
             'email' => $user->email,
             'role' => $user->role,
         ];
-        $cookie = Cookie::make('user_data', json_encode($userData), 60);
+        $cookie = Cookie::make('c_user', json_encode($userData), 60);
 
         Auth::login($user);
 
