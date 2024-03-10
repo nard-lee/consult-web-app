@@ -33,6 +33,14 @@
                     <a href="/logout">Logout</a>
                 </div>
             </nav>
+            <div>
+                @if($user['role'] == 'student')
+                    @include('partials/StudentDashboard')
+                @endif
+                @if($user['role'] == 'instructor')
+                    @include('partials/InstructorDashboard')
+                @endif
+            </div>
         </div>
     </body>
 </html>
