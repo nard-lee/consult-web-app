@@ -18,3 +18,4 @@ Route::post('/signup', [UserController::class, 'Signup'])->middleware('validate_
 Route::get('/login/{role}', [UserController::class, 'ViewLogin']);
 Route::post('/login', [UserController::class, 'Login'])->middleware('validate_user_data');
 
+Route::get('/logout', [UserController::class, 'Logout']);

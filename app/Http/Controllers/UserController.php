@@ -21,7 +21,8 @@ class UserController extends Controller
         return $uniqueID;
     }
 
-    public function ViewForm(){
+    public function ViewForm()
+    {
         return view('Form');
     }
 
@@ -67,5 +68,12 @@ class UserController extends Controller
         Auth::login($user);
 
         return response()->json(['success' => "user logged in"], 200)->withCookie($cookie);
+    }
+
+    public function Logout()
+    {
+        Auth::logout();
+        $cookie = Cookie::forget('c_user');
+        return redirect('/form');
     }
 }

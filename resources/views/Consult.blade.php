@@ -13,7 +13,7 @@
 
     </head>
     <body class="antialiased">
-        <div>
+        <div class="wrapper">
             <nav class="cs-nav flex flex-col justify-between items-center h-100">
                 <div class="profile flex flex-col items-center gap-3">
                     <div class="rounded">
@@ -35,10 +35,10 @@
             </nav>
             <div>
                 @if($user['role'] == 'student')
-                    @include('partials/StudentDashboard')
+                    @include('partials/StudentConsult')
                 @endif
                 @if($user['role'] == 'instructor')
-                    @include('partials/InstructorDashboard')
+                    @include('partials/InstructorConsult')
                 @endif
             </div>
         </div>

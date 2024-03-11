@@ -70,7 +70,7 @@
 
                     if (data.success) {
                         console.log(data);
-                        window.location.href = "/";
+                        window.location.href = "/dashboard";
                     }
                 })
         });
