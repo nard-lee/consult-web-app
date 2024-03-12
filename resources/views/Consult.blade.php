@@ -35,7 +35,7 @@
             </nav>
             <div>
                 @if($user['role'] == 'student')
-                    @include('partials/StudentConsult')
+                    @include('partials/StudentConsult', ['apt_sched' => $apt_sched])
                 @endif
                 @if($user['role'] == 'instructor')
                     @include('partials/InstructorConsult')

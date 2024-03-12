@@ -19,3 +19,5 @@ Route::get('/login/{role}', [UserController::class, 'ViewLogin']);
 Route::post('/login', [UserController::class, 'Login'])->middleware('validate_user_data');
 
 Route::get('/logout', [UserController::class, 'Logout']);
+
+Route::post('/appoint', [UserController::class, 'Appointment']);

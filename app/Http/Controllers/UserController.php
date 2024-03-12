@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -75,5 +76,18 @@ class UserController extends Controller
         Auth::logout();
         $cookie = Cookie::forget('c_user');
         return redirect('/form');
+    }
+
+    public function Appointment(Request $request){
+        $apt_data = [
+            'student_id' => $request->student_id,
+            'instructor_id' => $request->instructor_id,
+            'concern' => $request->concern
+        ];
+
+        
+        $pr = DB::table('appointments')->insert($apt_data);
+
+        echo var_dump($apt_data);
     }
 }

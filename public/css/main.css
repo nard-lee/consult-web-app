@@ -39,6 +39,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+.form-group textarea,
 .form-group input {
     background: #142138;
     padding: 10px;
@@ -48,6 +49,7 @@ body {
     border: 2px solid #0f192a;
 }
 
+.form-group textarea:focus,
 .form-group input:focus {
     border: 2px solid #1b2d4b;
 }
