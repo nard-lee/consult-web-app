@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [MainController::class, 'Dashboard']);
@@ -21,3 +23,9 @@ Route::post('/login', [UserController::class, 'Login'])->middleware('validate_us
 Route::get('/logout', [UserController::class, 'Logout']);
 
 Route::post('/appoint', [UserController::class, 'Appointment']);
+
+Route::post('/delapt', function(Request $request){
+    $apt_id = $request->apt_id;
+    DB::table('appointments')->where('apt_id', '=', "$apt_id")->delete();
+    return redirect('/consult');
+});

@@ -85,9 +85,8 @@ class UserController extends Controller
             'concern' => $request->concern
         ];
 
-        
         $pr = DB::table('appointments')->insert($apt_data);
+        return redirect()->to('/consult');
 
-        echo var_dump($apt_data);
     }
 }

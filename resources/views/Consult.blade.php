@@ -38,7 +38,7 @@
                     @include('partials/StudentConsult', ['apt_sched' => $apt_sched])
                 @endif
                 @if($user['role'] == 'instructor')
-                    @include('partials/InstructorConsult')
+                    @include('partials/InstructorConsult', ['apts' => $apt])
                 @endif
             </div>
         </div>
